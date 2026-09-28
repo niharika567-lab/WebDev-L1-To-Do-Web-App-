@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Departure Board – To-Do</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Departure Board</h1>
+    <p>Every task is a flight. Get it boarded, get it landed.</p>
+  </header>
+
+  <div class="add">
+    <input id="taskInput" type="text" maxlength="120" placeholder="Where is this task headed? (e.g. Send invoice)" aria-label="New task">
+    <button class="btn-add" id="addBtn">Add Task</button>
+  </div>
+
+  <div class="boards">
+    <section class="board departures" aria-labelledby="dh">
+      <div class="board-head">
+        <h2 id="dh">Pending Tasks <small>Departures</small></h2>
+        <span class="count" id="pendingCount">0 pending</span>
+      </div>
+      <ul id="pendingList"></ul>
+    </section>
+
+    <section class="board arrivals" aria-labelledby="ah">
+      <div class="board-head">
+        <h2 id="ah">Completed Tasks <small>Arrivals</small></h2>
+        <span class="count" id="doneCount">0 completed</span>
+      </div>
+      <ul id="doneList"></ul>
+    </section>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
